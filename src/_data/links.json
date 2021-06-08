@@ -1,0 +1,16 @@
+{
+    "platforms": {
+        "yandex": "https://music.yandex.ru/album/13967631",
+        "apple": "https://podcasts.apple.com/ru/podcast/%D0%BA%D1%80%D1%83%D0%B3%D0%BE%D0%B7%D0%BE%D1%80-%D0%B2-%D1%84%D0%BE%D1%80%D0%BC%D0%B5-%D0%BE%D0%B2%D0%B0%D0%BB%D0%B0/id1553821363",
+        "google": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy80OTMzNjQ2MC9wb2RjYXN0L3Jzcw==",
+        "breaker": "https://www.breaker.audio/krughozor-v-formie-ovala",
+        "castbox": "https://castbox.fm/channel/id1177814",
+        "pocket": "https://pca.st/qxw0i5jt",
+        "radiopublic": "https://radiopublic.com/-8XYwAe",
+        "spotify": "https://open.spotify.com/show/3EeB1bRyhkuGzNrogQ1Z2Z"
+    },
+    "social": {
+        "telegram": "https://t.me/grigorevpv",
+        "instagram": "https://www.instagram.com/krugozor_podcast/"
+    }
+}

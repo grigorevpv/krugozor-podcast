@@ -1,0 +1,25 @@
+{
+  "name": "krugozor",
+  "version": "1.0.0",
+  "description": "Static site of krugozor podcast",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "feed": "cd dist && rsync --archive --compress index.html krugozor@krugozor.xyz:/home/krugozor/podcast/www",
+    "about": "cd dist/about && rsync --archive --compress index.html krugozor@krugozor.xyz:/home/krugozor/podcast/www/about",
+    "styles": "cd dist/css && rsync --archive --compress site.css krugozor@krugozor.xyz:/home/krugozor/podcast/www/css",
+    "images": "cd dist && rsync -r --archive --compress ./img  krugozor@krugozor.xyz:/home/krugozor/podcast/www",
+    "mp3": "cd src/mp3 && rsync -r --archive --compress 1.mp3 krugozor@krugozor.xyz:/home/krugozor/podcast/www/mp3",
+    "deploy": "npm run feed && npm run styles && npm run mp3 && npm run about && npm run images",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel Grigorev grigorevpv@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "clean-css": "^5.1.2",
+    "html-minifier": "^4.0.0",
+    "minify": "^7.0.2"
+  }
+}

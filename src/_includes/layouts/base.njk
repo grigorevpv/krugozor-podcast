@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% set metrica %}
+    {% include "../../js/metrica.html" %}
+  {% endset %}
+  {{ metrica | jsmin | safe }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krugozor</title>
+  {% set css %}
+    {% include "../../css/site.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto&display=fallback" rel="stylesheet">
+</head>
+<body>
+  {{ content | htmlmin | safe }}
+</body>
+</html>

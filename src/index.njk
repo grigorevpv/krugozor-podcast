@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+
+<header>
+  {% import "components/header.njk" as header %}
+  {{ header.link('О нас', '/about') }}
+</header>
+<main>
+  {% import "components/description.njk" as description %}
+  {{ description.text(data.intro) }}
+
+  {% include "components/platforms.njk" %}
+
+  {% import "components/title.njk" as separator %}
+  {{ separator.title('Выпуски') }}
+
+  {% include "components/episodes.njk" %}
+</main>
+{% include "components/info.njk" %}
+<footer>
+  {% include "components/footer.njk" %}
+</footer>

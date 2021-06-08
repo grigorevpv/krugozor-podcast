@@ -1,0 +1,27 @@
+<div class="episodes">
+    {% for episode in collections.episode | reverse %}
+        {% set imageUrl %}
+            ./img/{{ episode.data.image }}
+        {% endset %}
+        {% set altText %}
+            Изображение для {{ episode.data.title }}
+        {% endset %}
+        {% set fileUrl %}
+            ./mp3/{{ episode.data.audio }}
+        {% endset %}
+
+        <article class="episode">
+            <div class="episode-chevron"></div>
+            <div class="episode-info">
+                <h4 class="title">{{ episode.data.title }}</h4>
+                <hr class="separator">
+                <p class="episode__description">{{ episode.data.description }}</p>
+                <audio class="episode__audio" preload="metadata" controls>
+                    <source src={{fileUrl}} type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+        </article>
+        
+    {% endfor %}
+</div>

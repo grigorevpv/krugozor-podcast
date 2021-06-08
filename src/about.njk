@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+---
+
+<header>
+  {% import "components/header.njk" as header %}
+  {{ header.link('Выпуски', '/') }}
+</header>
+<main>
+    {% import "components/description.njk" as description %}
+    {{ description.text(data.intro) }}
+
+    {% include "components/platforms.njk" %}
+
+    {% import "components/title.njk" as separator %}
+    {{ separator.title('О  подкасте') }}
+
+    {% import "components/description.njk" as description %}
+    {{ description.text(data.aboutPodcast, "about-podcast") }}
+
+    {% import "components/title.njk" as separator %}
+    {{ separator.title('Ведущие подкаста') }}
+
+    {% import "components/member.njk" as member %}
+    {{ member.member(data.members.pavel.image, data.members.pavel.role, data.members.pavel.name, data.members.pavel.instagram, data.members.pavel.description) }}
+    {{ member.member(data.members.valentina.image, data.members.valentina.role, data.members.valentina.name, data.members.valentina.instagram, data.members.valentina.description) }}
+
+</main>
+
+<footer>
+  {% include "components/footer.njk" %}
+</footer>
