@@ -9,8 +9,8 @@
     "feed": "cd dist && rsync --archive --compress index.html krugozor@krugozor.xyz:/home/krugozor/podcast/www",
     "about": "cd dist/about && rsync --archive --compress index.html krugozor@krugozor.xyz:/home/krugozor/podcast/www/about",
     "styles": "cd dist/css && rsync --archive --compress site.css krugozor@krugozor.xyz:/home/krugozor/podcast/www/css",
-    "images": "cd dist && rsync -r --archive --compress ./img  krugozor@krugozor.xyz:/home/krugozor/podcast/www",
-    "mp3": "cd src/mp3 && rsync -r --archive --compress 1.mp3 krugozor@krugozor.xyz:/home/krugozor/podcast/www/mp3",
+    "images": "cd src && rsync -r --archive --compress ./img  krugozor@krugozor.xyz:/home/krugozor/podcast/www",
+    "mp3": "cd src && rsync -r --archive --compress ./mp3 krugozor@krugozor.xyz:/home/krugozor/podcast/www",
     "deploy": "npm run feed && npm run styles && npm run mp3 && npm run about && npm run images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
