@@ -67,6 +67,7 @@ header > a:hover {
 
 .about-podcast {
   text-align: left;
+  text-indent: 1em;
 }
 
 .platforms-top,
@@ -109,15 +110,16 @@ header > a:hover {
   flex-direction: row;
   margin: 20px 0;
   border-radius: 6px;
-  background-color: #F4F1F1;
+  background-color: #f1f3f4;
 }
 
 .episode-chevron {
-  width: 60px;
-  background-color: aquamarine;
+  width: 20px;
+  background-image: linear-gradient(to top right,#ff6d28,#ff864d, #fdbd59);
 }
 
 .episode-info {
+  width: 100%;
   padding: 0 14px 0 20px;
 }
 
@@ -188,10 +190,10 @@ header > a:hover {
 .member {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 }
 
 .member__image {
-  height: 250px;
   width: 250px;
   margin: 0 auto;
 }
@@ -203,12 +205,13 @@ header > a:hover {
 }
 
 .member__role {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .member__description {
   font-size: 15px;
   line-height: 150%;
+  text-indent: 1em;
 }
 
 main {
@@ -231,21 +234,8 @@ h1 > a:visited {
   text-decoration: none;
 }
 
-h1 > a:hover {
-  color: #20399daa;
-  text-decoration: underline;
-}
-
 h2 {
   font-size: 1.5em;
-}
-
-a:hover {
-  color: #20399daa;
-}
-
-time {
-  color: #666666;
 }
 
 article img {
