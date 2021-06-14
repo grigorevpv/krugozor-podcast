@@ -3,8 +3,14 @@ layout: layouts/base.njk
 ---
 
 <header>
+  {% set instagram %}
+    {{ links.social.instagram }}
+  {% endset %}
+  {% set mail %}
+    {{ links.social.mail }}
+  {% endset %}
   {% import "components/header.njk" as header %}
-  {{ header.link('О нас', '/about') }}
+  {{ header.link('О нас', '/about', instagram, mail) }}
 </header>
 <main>
   {% import "components/description.njk" as description %}
