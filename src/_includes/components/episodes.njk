@@ -1,11 +1,5 @@
 <div class="episodes">
     {% for episode in collections.episode | reverse %}
-        {% set imageUrl %}
-            ./img/{{ episode.data.image }}
-        {% endset %}
-        {% set altText %}
-            Изображение для {{ episode.data.title }}
-        {% endset %}
         {% set fileUrl %}
             ./mp3/{{ episode.data.audio }}
         {% endset %}
